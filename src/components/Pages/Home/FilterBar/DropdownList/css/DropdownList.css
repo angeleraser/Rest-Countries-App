@@ -5,8 +5,15 @@
   color: var(--text);
   background-color: var(--element);
   border-radius: 4px;
+  text-align: center;
   position: relative;
+  grid-column: span 2;
 }
+
+.dropdown-list:last-child {
+  grid-row-start: 3;
+}
+
 .dropdown-list > button,
 .dropdown-list ul {
   padding: 19px 24px;
@@ -62,8 +69,11 @@
     font-size: 14px;
     margin-top: 0;
     place-self: flex-end;
+    grid-column: span 1;
   }
   .dropdown-list:last-child {
     margin-left: 0;
+    grid-row-start: 1;
+    grid-column-start: 3;
   }
 }
