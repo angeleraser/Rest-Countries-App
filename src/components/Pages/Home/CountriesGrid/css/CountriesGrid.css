@@ -1,0 +1,37 @@
+.countries-grid {
+  grid-template-columns: 266px;
+  place-content: center;
+  row-gap: 38px;
+  margin-top: 32px;
+  margin-bottom: 22px;
+}
+
+.countries-grid .not-found {
+  font-size: 36px;
+  grid-column: span 2;
+  color: var(--text);
+}
+
+@media screen and (min-width: 640px) {
+  .countries-grid {
+    grid-template-columns: repeat(2, 265px);
+    gap: 74px;
+    margin-top: 48px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .countries-grid {
+    grid-template-columns: repeat(3, 265px);
+    gap: 74px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .countries-grid {
+    grid-template-columns: repeat(4, 265px);
+    gap: 74px;
+  }
+}

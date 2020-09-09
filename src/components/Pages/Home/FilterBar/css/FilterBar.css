@@ -1,0 +1,17 @@
+.filter-bar {
+  padding-top: 22px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 30px;
+  place-items: flex-start;
+  max-width: 480px;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .filter-bar {
+    padding-top: 48px;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.main {
+  padding: 0 18px;
+  background-color: var(--background);
+}
+
+.main .total-countries {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  margin-top: 40px;
+  color: var(--text);
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    padding: 0 78px;
+  }
+
+  .main .total-countries {
+    font-size: 36px;
+  }
+}

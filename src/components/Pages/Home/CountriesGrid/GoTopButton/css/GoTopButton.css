@@ -1,0 +1,30 @@
+.go-top-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--element);
+  position: fixed;
+  bottom: 20px;
+  right: 26px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.2);
+}
+
+.go-top-button svg {
+  transform: scale(1.3) rotate(180deg);
+  stroke: var(--text);
+  fill: var(--text);
+}
+
+@media screen and (min-width: 1280px) {
+  .go-top-button {
+    right: 78px;
+    bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .go-top-button {
+    right: calc((100vw / 2) - 40px);
+    bottom: 60px;
+  }
+}

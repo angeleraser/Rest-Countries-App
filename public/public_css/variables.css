@@ -1,0 +1,15 @@
+.app-wrapper {
+  --background: hsl(0, 0%, 98%);
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --element: hsl(0, 0%, 100%);
+  --invalid:  hsl(0, 100%, 58%);
+}
+
+.app-wrapper.dark {
+  --background: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+  --input: hsl(0, 0%, 100%);
+  --element: hsl(209, 23%, 22%);
+}

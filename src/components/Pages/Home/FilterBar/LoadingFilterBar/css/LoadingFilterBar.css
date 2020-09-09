@@ -1,0 +1,23 @@
+.loading-filter-bar {
+  padding-top: 22px;
+}
+
+.loading-filter-bar .item {
+  max-width: 480px;
+  height: 60px;
+  background-color: var(--element);
+  border-radius: 6px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-filter-bar .item.dropdown-list {
+  max-width: 200px;
+}
+
+@media screen and (min-width: 800px) {
+  .loading-filter-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 48px;
+  }
+}
