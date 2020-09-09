@@ -5,6 +5,7 @@
   font-size: 14px;
   text-transform: capitalize;
   font-family: "Nunito Sans", sans-serif;
+  user-select: none;
 }
 
 .dark-mode-toggle svg {

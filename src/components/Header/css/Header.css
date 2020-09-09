@@ -8,6 +8,7 @@
 .header > .header-title {
   font-size: 14px;
   font-family: "Nunito Sans", sans-serif;
+  user-select: none;
 }
 
 @media screen and (min-width: 1024px) {
