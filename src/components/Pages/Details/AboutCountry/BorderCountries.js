@@ -17,7 +17,7 @@ const BorderCountries = ({ countries }) => {
                 {name.length > 12 ? name.split(" ")[0] : name}
               </Link>
             ))
-          : "Unknow"}
+          : "Not registered"}
       </div>
     </li>
   );

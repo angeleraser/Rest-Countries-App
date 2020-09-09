@@ -26,7 +26,9 @@ const Home = () => {
   const query = search.split("=")[1];
   useEffect(() => {
     if (shouldFetchData) {
-      fetchAction();
+      setTimeout(() => {
+        fetchAction();
+      }, 500);
     }
   }, [shouldFetchData]);
 
