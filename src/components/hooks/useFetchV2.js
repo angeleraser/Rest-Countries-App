@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCallback } from "react";
 const fetchResource = async ({
   url,
   onStart,
@@ -32,7 +33,7 @@ export const useFetch = (url) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const makeRequest = () => {
+  const makeRequest = useCallback(() => {
     console.log("Fetching data...");
     fetchResource({
       url,
@@ -49,7 +50,7 @@ export const useFetch = (url) => {
         setError(val);
       },
     });
-  };
+  }, [url]);
 
   return [response, loading, error, makeRequest];
 };

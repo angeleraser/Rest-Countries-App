@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./css/Details.css";
 import BackButton from "./AboutCountry/BackButton";
@@ -50,7 +47,7 @@ const Details = ({
         }, 500);
       }
     }
-  }, [countryName]);
+  }, [countryName, fetchedCountries, dispatch, fetchCountry]);
 
   // Save and set the current country
   useEffect(() => {
@@ -65,7 +62,7 @@ const Details = ({
           payload: response,
         });
     }
-  }, [response]);
+  }, [response, dispatch, countryName, fetchedCountries]);
 
   // Set to null the currentCountry whe the user leaves the Details page
   useEffect(() => {
@@ -75,7 +72,7 @@ const Details = ({
         payload: null,
       });
     };
-  }, []);
+  }, [dispatch]);
 
   // Redirect to Home page when the country url is wrong
   if (!isInTheList(allCountries, countryName)) {

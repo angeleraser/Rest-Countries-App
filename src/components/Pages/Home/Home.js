@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import "./css/Home.css";
 import FilterBar from "./FilterBar/FilterBar";
@@ -30,7 +29,7 @@ const Home = () => {
         fetchAction();
       }, 500);
     }
-  }, [shouldFetchData]);
+  }, [shouldFetchData, fetchAction]);
 
   useEffect(() => {
     !!response && dispatch({ type: "STORE_COUNTRIES_LIST", payload: response });
@@ -40,7 +39,7 @@ const Home = () => {
     !!response &&
       search &&
       dispatch({ type: "SEARCH_COUNTRY", payload: query });
-  }, [response]);
+  }, [response, dispatch, query, search]);
 
   return (
     <main className="w-full main flex flex-col items-start">
