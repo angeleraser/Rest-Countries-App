@@ -7,7 +7,7 @@ const BackButton = () => {
   return (
     <button
       onClick={() => {
-        goBack();
+        replace('/');
       }}
       className="back-button flex justify-center items-center">
       {arrowLeft} Back
