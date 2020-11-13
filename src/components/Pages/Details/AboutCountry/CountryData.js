@@ -22,8 +22,8 @@ const CountryData = ({
         style={{
           backgroundImage: `url(${flag})`,
         }}
-        className="country-flag animate__slideInLeft animate__animated bg-cover bg-center bg-no-repeat inline-block w-full"></div>
-      <ul className="country-info animate__slideInRight animate__animated grid w-full">
+        className="country-flag bg-cover bg-center bg-no-repeat inline-block w-full"></div>
+      <ul className="country-info grid w-full">
         <h1 className="country-name">{name}</h1>
         <li>
           Native name: <span>{name}</span>
