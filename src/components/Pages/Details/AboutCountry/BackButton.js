@@ -3,7 +3,7 @@ import { arrowLeft } from "../../../../svg-icons";
 import { useHistory } from "react-router-dom";
 
 const BackButton = () => {
-  const { goBack } = useHistory();
+  const { replace } = useHistory();
   return (
     <button
       onClick={() => {
