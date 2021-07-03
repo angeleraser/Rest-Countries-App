@@ -41,11 +41,11 @@ const Details = ({
         type: "SET_CURRENT_COUNTRY",
         payload: null,
       });
-      if (isInTheList(allCountries, countryName)) {
+      
         setTimeout(() => {
           fetchCountry();
         }, 500);
-      }
+      
     }
   }, [countryName, fetchedCountries]);
 
