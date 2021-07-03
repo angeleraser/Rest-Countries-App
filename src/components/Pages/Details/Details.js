@@ -35,18 +35,18 @@ const Details = ({
         type: "SET_CURRENT_COUNTRY",
         payload: getCountryByName(fetchedCountries, countryName),
       });
-    } else {
-      // Resets the current country while is fetching
-      dispatch({
-        type: "SET_CURRENT_COUNTRY",
-        payload: null,
-      });
-      
-        setTimeout(() => {
-          fetchCountry();
-        }, 500);
-      
+
+      return void 0;
     }
+    // Resets the current country while is fetching
+    dispatch({
+      type: "SET_CURRENT_COUNTRY",
+      payload: null,
+    });
+
+    setTimeout(() => {
+      fetchCountry();
+    }, 500);
   }, [countryName, fetchedCountries]);
 
   // Save and set the current country
