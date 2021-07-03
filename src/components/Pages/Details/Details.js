@@ -47,7 +47,7 @@ const Details = ({
         }, 500);
       }
     }
-  }, [countryName, fetchedCountries, dispatch, fetchCountry]);
+  }, [countryName, fetchedCountries]);
 
   // Save and set the current country
   useEffect(() => {
@@ -62,7 +62,7 @@ const Details = ({
           payload: response,
         });
     }
-  }, [response, dispatch, countryName, fetchedCountries]);
+  }, [response, countryName, fetchedCountries]);
 
   // Set to null the currentCountry whe the user leaves the Details page
   useEffect(() => {
@@ -72,7 +72,7 @@ const Details = ({
         payload: null,
       });
     };
-  }, [dispatch]);
+  }, []);
 
   // Redirect to Home page when the country url is wrong
   if (!isInTheList(allCountries, countryName)) {
