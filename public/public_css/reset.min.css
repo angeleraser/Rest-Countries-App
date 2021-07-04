@@ -88,9 +88,8 @@ button:focus {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
   min-width: 375px;
-  max-width: 1440px;
   margin: 0 auto;
   background-color: var(--background);
   min-height: 100vh;

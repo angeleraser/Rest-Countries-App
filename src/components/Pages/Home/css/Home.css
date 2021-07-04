@@ -1,6 +1,7 @@
 .main {
   padding: 0 18px;
   background-color: var(--background);
+  max-width: 1440px;
 }
 
 .main .total-countries {

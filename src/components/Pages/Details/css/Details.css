@@ -6,6 +6,7 @@
   font-family: "Nunito Sans", sans-serif;
   background-color: var(--background);
   overflow: hidden;
+  max-width: 1440px;
 }
 
 .details .country-info {
@@ -88,7 +89,6 @@
 @media screen and (min-width: 1140px) {
   .details {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
     grid-template-areas: "Back-button Back-button" "Country-flag Country-info";
     column-gap: 100px;
     row-gap: 80px;
