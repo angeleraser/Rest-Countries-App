@@ -1,4 +1,3 @@
 export const isInTheList = (list, country) => {
-  return ~list.map((c) => c.name.toLowerCase()).indexOf(country) ? true : false;
+  return list.find((el) => el.name.toLowerCase() === country.toLowerCase());
 };
-

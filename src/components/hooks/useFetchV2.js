@@ -20,7 +20,7 @@ const fetchResource = async ({
 
     // Get the data
     onSuccess(jsonResponse);
-    console.log("Fetching completed!");
+    // console.log("Fetching completed!");
   } catch (error) {
     onError(error);
   } finally {
@@ -34,7 +34,7 @@ export const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   const makeRequest = useCallback(() => {
-    console.log("Fetching data...");
+    // console.log("Fetching data...");
     fetchResource({
       url,
       onStart() {

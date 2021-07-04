@@ -30,14 +30,6 @@ const Details = ({
 
   // Check existence of the country in the fetchedList
   useEffect(() => {
-    if (isInTheList(fetchedCountries, countryName)) {
-      dispatch({
-        type: "SET_CURRENT_COUNTRY",
-        payload: getCountryByName(fetchedCountries, countryName),
-      });
-
-      return void 0;
-    }
     // Resets the current country while is fetching
     dispatch({
       type: "SET_CURRENT_COUNTRY",
@@ -45,9 +37,18 @@ const Details = ({
     });
 
     setTimeout(() => {
+      if (isInTheList(fetchedCountries, countryName)) {
+        dispatch({
+          type: "SET_CURRENT_COUNTRY",
+          payload: getCountryByName(fetchedCountries, countryName),
+        });
+
+        return void 0;
+      }
+
       fetchCountry();
     }, 500);
-  }, [countryName, fetchedCountries]);
+  }, [countryName]);
 
   // Save and set the current country
   useEffect(() => {
@@ -56,13 +57,13 @@ const Details = ({
         type: "SET_CURRENT_COUNTRY",
         payload: response,
       });
-      !isInTheList(fetchedCountries, countryName) &&
-        dispatch({
-          type: "SAVE_FETCHED_COUNTRY",
-          payload: response,
-        });
+
+      dispatch({
+        type: "SAVE_FETCHED_COUNTRY",
+        payload: response,
+      });
     }
-  }, [response, countryName, fetchedCountries]);
+  }, [response]);
 
   // Set to null the currentCountry whe the user leaves the Details page
   useEffect(() => {
